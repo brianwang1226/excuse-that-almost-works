@@ -1,8 +1,9 @@
+// The Excuse That Almost Works: a gamer texts the boss on GTA 6 launch week.
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const line =
-  "Boss, my car died. GTA 6 launches today, and Los Santos won't save itself. I'll be back Monday. Probably.";
+  "Boss, my internet is down. GTA 6 launches today and Los Santos needs me. Back Monday. Probably.";
 
 // The gate allows 1-140 characters and at most 20 words; refuse a bad text.
 if (line.length < 1 || line.length > 140) {
