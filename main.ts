@@ -1,4 +1,5 @@
-// The Excuse That Almost Works: a gamer texts the boss on GTA 6 launch week.
+// The Excuse That Almost Works: a gamer texts the boss on GTA 6 launch week,
+// hoping the boss buys a dead internet connection as the reason.
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
