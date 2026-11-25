@@ -1,0 +1,17 @@
+import { mkdirSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+
+const line =
+  "Boss, my car died. GTA 6 launches today, and Los Santos won't save itself. I'll be back Monday. Probably.";
+
+// The gate allows 1-140 characters and at most 20 words; refuse a bad text.
+if (line.length < 1 || line.length > 140) {
+  throw new Error(`entry text is ${line.length} characters, must be 1-140`);
+}
+if (line.trim().split(/\s+/).length > 20) {
+  throw new Error("entry text is over 20 words");
+}
+
+const outDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
+mkdirSync(outDir, { recursive: true });
+writeFileSync(join(outDir, "entry.txt"), line, "utf8");
